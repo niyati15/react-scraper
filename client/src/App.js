@@ -1,29 +1,23 @@
 import React, { Component } from 'react';
-import SearchCard from "./components/SearchCard/SearchCard.js"
-import Jumbotron from "./components/Jumbotron/Jumbotron.js"
-
-import Container from "./components/Container/Container.js"
-
-import Navbar from "./components/Navbar/Navbar.js"
-
-// import logo from './logo.svg';
-// import './App.css';
+import SearchCard from "./components/SearchCard/SearchCard.js";
+import Jumbotron from "./components/Jumbotron/Jumbotron.js";
+import Navbar from "./components/Navbar/Navbar.js";
 
 class App extends Component {
   render() {
     return (
 
-      <div className = "container">
+      <div className="container">
 
 
         <Navbar>
         </Navbar>
 
-      <Jumbotron>
+        <Jumbotron>
         </Jumbotron>
-        
-      <SearchCard>
-      </SearchCard>
+
+        <SearchCard>
+        </SearchCard>
       </div>
     );
   }
