@@ -5,6 +5,7 @@ import Jumbotron from "./components/Jumbotron/Jumbotron.js"
 import Container from "./components/Container/Container.js"
 
 import Navbar from "./components/Navbar/Navbar.js"
+import ResultsCard from "./components/ResultsCard/ResultsCard.js"
 
 // import logo from './logo.svg';
 // import './App.css';
@@ -24,6 +25,9 @@ class App extends Component {
         
       <SearchCard>
       </SearchCard>
+      <ResultsCard>
+      </ResultsCard>
+
       </div>
     );
   }
