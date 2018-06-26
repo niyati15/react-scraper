@@ -1,6 +1,7 @@
 import React from "react";
 
 const SearchCard = () => (
+    <div className="container">
     <div className="card">
         <div className="card-header">
             Query
@@ -22,6 +23,7 @@ const SearchCard = () => (
                 <button type="submit" className="btn btn-primary" id="SearchCard-submitBtn">Submit</button>
             </form>
         </div>
+    </div>
     </div>
 );
 
