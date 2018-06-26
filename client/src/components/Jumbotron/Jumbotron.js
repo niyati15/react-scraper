@@ -1,4 +1,4 @@
-import React from "reach";
+import React from "react";
 import "./Jumbotron.css";
 
 const Jumbotron = props => (

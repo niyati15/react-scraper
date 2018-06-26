@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
-import SearchCard from "./components/SearchCard"
-import logo from './logo.svg';
-import './App.css';
+import SearchCard from "./components/SearchCard/SearchCard.js"
+import Jumbotron from "./components/Jumbotron/Jumbotron.js"
+// import logo from './logo.svg';
+// import './App.css';
 
 class App extends Component {
   render() {
     return (
+      <div>
+      <Jumbotron>
+        </Jumbotron>
       <SearchCard>
       </SearchCard>
+      </div>
     );
   }
 }
