@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import SearchCard from "./components/SearchCard/SearchCard.js";
-import Jumbotron from "./components/Jumbotron/Jumbotron.js";
-import Navbar from "./components/Navbar/Navbar.js";
+
+import SearchCard from "./components/SearchCard/SearchCard.js"
+import Jumbotron from "./components/Jumbotron/Jumbotron.js"
+import Navbar from "./components/Navbar/Navbar.js"
+import ResultsCard from "./components/ResultsCard/ResultsCard.js"
 
 class App extends Component {
   render() {
@@ -15,9 +17,12 @@ class App extends Component {
 
         <Jumbotron>
         </Jumbotron>
-
-        <SearchCard>
-        </SearchCard>
+        
+      <SearchCard>
+      </SearchCard>
+      <ResultsCard>
+      </ResultsCard>
+      
       </div>
     );
   }

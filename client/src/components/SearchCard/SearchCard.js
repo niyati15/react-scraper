@@ -1,7 +1,7 @@
 import React from "react";
 
 const SearchCard = () => (
-    <div className="container">
+    // <div className="container">
     <div className="card">
         <div className="card-header">
             Query
@@ -24,7 +24,7 @@ const SearchCard = () => (
             </form>
         </div>
     </div>
-    </div>
+    // </div>
 );
 
 export default SearchCard;
