@@ -2,27 +2,21 @@
 // Axios is a promised-based http library, similar to jQuery's Ajax method
 // It works on the client and on the server
 var axios = require("axios");
-//packages that does th scraping
 var cheerio = require("cheerio");
+const path = require("path");
+const router = require("express").Router();
+const apiRoutes = require("./api");
 
 //scarpes from webpage
-app.get("/scrape", function(req, res){
-    axios.get("http://www.echojs.com/").then(function(response) {
-        var $ = cheerio.load(response.data);
-    })
-});
+router.use("/api", apiRoutes);
 
 //shows all saved articles
-app.get("/saved", function(req, res){
-
-});
+router.use("/saved", apiRoutes);
 
 //shows specific article
-app.get("/:title", function(req,res){
-
-});
+router.use("/:title", apiRoutes);
 
 //saves specific article
-app.post("/:id/save", function(req,res){
-    
-});
+router.use("/:id/save", apiRoutes);
+
+module.exports = router;
