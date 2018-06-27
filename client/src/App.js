@@ -1,26 +1,29 @@
 import React, { Component } from 'react';
 import SearchCard from "./components/SearchCard/SearchCard.js"
 import Jumbotron from "./components/Jumbotron/Jumbotron.js"
+import { Link } from "react-router-dom"
 import Navbar from "./components/Navbar/Navbar.js"
 import ResultsCard from "./components/ResultsCard/ResultsCard.js"
 import API from "./utils/API.js"
 
-class App extends Component {
-state = {
-  articles: []
-}
+class Articles extends Component {
+  state = {
+    articles: []
+  }
 
-componentDidMount(){
-  this.loadArticles();
-}
+  componentDidMount() {
+    this.loadArticles();
+  }
 
-loadArticles = () => {
-  API.getArticles()
-  .then(articles => {
-    console.log(articles);
-  })
-  .catch(err => console.log(err))
-}
+  loadArticles = () => {
+    API.getArticles()
+      .then(res =>
+        this.setState({articles: res.data}), {
+        
+        // console.log(articles);
+      })
+      .catch(err => console.log(err))
+  }
 
   render() {
     return (
@@ -35,11 +38,28 @@ loadArticles = () => {
         <SearchCard>
         </SearchCard>
 
-        <ResultsCard>
-        </ResultsCard>
+        <div>
+
+          {this.state.articles.length ? (
+            <ul>
+              {this.state.articles.map(article => (
+                <li>
+                  {/* <Link to={"/articles/" + article._id}> */}
+                    <strong>
+                      {article.title} by {article.author}
+                    </strong>
+                  {/* </Link> */}
+                </li>
+              ))}
+            </ul>
+          ) : (
+              <h3>No Results to Display</h3>
+            )}
+
+        </div>
       </div>
     );
   }
 }
 
-export default App;
+export default Articles;
