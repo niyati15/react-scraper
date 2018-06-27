@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import SearchCard from "./components/SearchCard/SearchCard.js"
-import Jumbotron from "./components/Jumbotron/Jumbotron.js"
-import { Link } from "react-router-dom"
-import Navbar from "./components/Navbar/Navbar.js"
-import ResultsCard from "./components/ResultsCard/ResultsCard.js"
-import API from "./utils/API.js"
+import SearchCard from "./components/SearchCard/SearchCard.js";
+import Jumbotron from "./components/Jumbotron/Jumbotron.js";
+import { Link } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar.js";
+import ResultsCard from "./components/ResultsCard/ResultsCard.js";
+import API from "./utils/API.js";
+import Delete from './components/Delete/Delete.js';
 
 class Articles extends Component {
   state = {
@@ -37,6 +38,7 @@ class Articles extends Component {
 
         <SearchCard>
         </SearchCard>
+        <Delete />
 
         <div>
 
@@ -47,7 +49,7 @@ class Articles extends Component {
                   {/* <Link to={"/articles/" + article._id}> */}
                     <strong>
                       {article.title} by {article.author}
-                    </strong>
+                    </strong> 
                   {/* </Link> */}
                 </li>
               ))}
