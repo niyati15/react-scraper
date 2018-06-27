@@ -1,1 +1,1 @@
-export { defualt } from "./ResultsCard"
+export { default } from "./ResultsCard"
