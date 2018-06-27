@@ -7,16 +7,16 @@ const path = require("path");
 const router = require("express").Router();
 const apiRoutes = require("./api");
 
-//scarpes from webpage
+//gets all articles from db
 router.use("/api", apiRoutes);
 
 //shows all saved articles
-router.use("/saved", apiRoutes);
+router.use("/save", apiRoutes);
 
 //shows specific article
-router.use("/:title", apiRoutes);
+router.use("/title", apiRoutes);
 
 //saves specific article
-router.use("/:id/save", apiRoutes);
+router.use("/delete", apiRoutes);
 
 module.exports = router;
