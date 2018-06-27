@@ -18,45 +18,25 @@ class Articles extends Component {
   loadArticles = () => {
     API.getArticles()
       .then(res =>
-        this.setState({articles: res.data}), {
-        
-        // console.log(articles);
-      })
+        this.setState({ articles: res.data }), {
+
+          // console.log(articles);
+        })
       .catch(err => console.log(err))
   }
 
   render() {
     return (
-
       <div className="container">
-        <Navbar>
-        </Navbar>
+        <Navbar />
 
-        <Jumbotron>
-        </Jumbotron>
+        <Jumbotron />
 
-        <SearchCard>
-        </SearchCard>
+        <SearchCard />
 
-        <div>
-
-          {this.state.articles.length ? (
-            <ul>
-              {this.state.articles.map(article => (
-                <li>
-                  {/* <Link to={"/articles/" + article._id}> */}
-                    <strong>
-                      {article.title} by {article.author}
-                    </strong>
-                  {/* </Link> */}
-                </li>
-              ))}
-            </ul>
-          ) : (
-              <h3>No Results to Display</h3>
-            )}
-
-        </div>
+        <ResultsCard 
+          article={this.state.articles} 
+        />
       </div>
     );
   }
