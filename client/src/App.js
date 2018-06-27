@@ -17,7 +17,7 @@ componentDidMount(){
 loadArticles = () => {
   API.getArticles()
   .then(articles => {
-    console.log("something else");
+    console.log(articles);
   })
   .catch(err => console.log(err))
 }
