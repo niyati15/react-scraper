@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
-import SearchCard from "./components/SearchCard/SearchCard.js";
-import Jumbotron from "./components/Jumbotron/Jumbotron.js";
-import { Link } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar.js";
-import ResultsCard from "./components/ResultsCard/ResultsCard.js";
-import API from "./utils/API.js";
+import axios from "axios";
+import cheerio from "cheerio";
+import SearchCard from "./components/SearchCard/SearchCard.js"
+import Jumbotron from "./components/Jumbotron/Jumbotron.js"
+import { Link } from "react-router-dom"
+import Navbar from "./components/Navbar/Navbar.js"
+import ResultsCard from "./components/ResultsCard/ResultsCard.js"
+import API from "./utils/API.js"
+import db from "./models"
 import Delete from './components/Delete/Delete.js';
 import SaveArticle from './components/SaveArticle/SaveArticle.js';
+const router = require("express").Router();
 
 class Articles extends Component {
   state = {
@@ -15,7 +19,13 @@ class Articles extends Component {
 
   componentDidMount() {
     this.loadArticles();
+
   }
+  
+
+scrapeWebsite = () => {
+
+}
 
   loadArticles = () => {
     API.getArticles()
