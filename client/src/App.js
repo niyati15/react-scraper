@@ -5,6 +5,7 @@ import SearchCard from "./components/SearchCard/SearchCard.js"
 import Jumbotron from "./components/Jumbotron/Jumbotron.js"
 import { Link } from "react-router-dom"
 import Navbar from "./components/Navbar/Navbar.js"
+import SavedCard from "./components/SavedCard/SavedCard.js";
 import ResultsCard from "./components/ResultsCard/ResultsCard.js"
 import API from "./utils/API.js"
 import db from "./models"
@@ -43,15 +44,16 @@ scrapeWebsite = () => {
 
         <Navbar />
 
-        <Delete /><br></br>
-
         <Jumbotron />
 
         <SearchCard />
 
-        <ResultsCard 
+        <ResultsCard article={this.state.articles}/>
+
+        <SavedCard 
           article={this.state.articles} 
         />
+
       </div>
     );
   }
