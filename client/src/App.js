@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar/Navbar.js";
 import ResultsCard from "./components/ResultsCard/ResultsCard.js";
 import API from "./utils/API.js";
 import Delete from './components/Delete/Delete.js';
+import SaveArticle from './components/SaveArticle/SaveArticle.js';
 
 class Articles extends Component {
   state = {
@@ -37,8 +38,9 @@ class Articles extends Component {
         </Jumbotron>
 
         <SearchCard>
-        </SearchCard>
-        <Delete />
+        </SearchCard> <br></br>
+        <SaveArticle />
+        <Delete /><br></br>
 
         <div>
 
