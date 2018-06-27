@@ -1,6 +1,6 @@
 const db = require("../models");
 
-module.exportss = {
+module.exports = {
     findAll: function(req, res) {
         db.Article
         .find(req.query)
